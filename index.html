@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ทะเบียนพระภิกษุสงฆ์อาพาธ โรคไตวายเรื้อรัง</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;600&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f3ea;--card:#fffdf8;--ink:#33210f;--mute:#7a6650;--line:#e6d8c2;--pri:#9a5a0b;--pri2:#f7ead4;--acc:#0f6b61;--hero:#7c3f0e;--on:#fff;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c140c;--card:#2a1f14;--ink:#f4e9d8;--mute:#c0a98a;--line:#463524;--pri:#e8a24a;--pri2:#3a2a18;--acc:#7fd3c4;--hero:#4a2508;--on:#1c140c;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1c140c;--card:#2a1f14;--ink:#f4e9d8;--mute:#c0a98a;--line:#463524;--pri:#e8a24a;--pri2:#3a2a18;--acc:#7fd3c4;--hero:#4a2508;--on:#1c140c;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.65 Sarabun,"Noto Sans Thai",sans-serif}
+h1,h2,h3,.tab,button,.pill{font-family:Prompt,Sarabun,sans-serif}
+.hero{background:linear-gradient(160deg,var(--hero),#a8620f);color:#fff;padding:28px 20px 56px;text-align:center}
+.hero h1{margin:6px 0 4px;font-size:1.55rem;font-weight:600;letter-spacing:.2px}
+.hero p{margin:0 auto;max-width:34rem;opacity:.85;font-size:.95rem}
+.hero .lotus{font-size:2rem}
+.pill{display:inline-block;margin-top:12px;padding:4px 14px;border-radius:99px;background:rgba(255,255,255,.14);font-size:.82rem}
+.wrap{max-width:860px;margin:-34px auto 0;padding:0 14px 140px}
+.tabs{display:flex;gap:4px;background:var(--card);padding:5px;border-radius:14px;border:1px solid var(--line);box-shadow:0 6px 20px rgba(0,0,0,.08)}
+.tab{flex:1;border:0;background:none;color:var(--mute);padding:10px 4px;border-radius:10px;font-size:.84rem;cursor:pointer}
+.tab[aria-selected=true]{background:var(--pri);color:var(--on);font-weight:500}
+.tab:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--acc);outline-offset:2px}
+.sec{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px;margin-top:16px}
+.sec h2{margin:0 0 4px;font-size:1.08rem;font-weight:600;color:var(--pri);display:flex;align-items:center;gap:8px}
+.sec .sub{margin:0 0 14px;color:var(--mute);font-size:.88rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px}
+.f span{display:block;font-size:.83rem;color:var(--mute);margin-bottom:2px}
+input,select,textarea{width:100%;font:inherit;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:9px 10px;min-height:44px}
+textarea{min-height:72px;resize:vertical}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.chips label{cursor:pointer}
+.chips input{position:absolute;opacity:0;width:1px;min-height:0}
+.chips b{display:inline-block;font-weight:400;padding:7px 13px;border-radius:99px;border:1px solid var(--line);background:var(--bg);font-size:.9rem}
+.chips input:checked+b{background:var(--pri);border-color:var(--pri);color:var(--on)}
+.chips input:focus-visible+b{outline:3px solid var(--acc)}
+.sublab{font-family:Prompt,sans-serif;font-size:.9rem;font-weight:500;margin:16px 0 0}
+.q{padding:14px 0;border-top:1px dashed var(--line)}
+.q:first-of-type{border-top:0}
+.q p{margin:0 0 8px;font-weight:500}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 11px;margin-top:6px;border:1px solid var(--line);border-radius:11px;cursor:pointer;background:var(--bg)}
+.opt input{width:20px;min-height:20px;margin-top:3px;accent-color:var(--pri);flex:none}
+.opt:has(input:checked){border-color:var(--pri);background:var(--pri2)}
+.bmi{margin-top:10px;font-size:.9rem;color:var(--mute)}
+.btn{border:0;background:var(--pri);color:var(--on);font-size:1rem;padding:13px 22px;border-radius:12px;cursor:pointer;font-weight:500}
+.btn.alt{background:var(--pri2);color:var(--pri)}
+.btn.del{background:#b4332a;color:#fff;padding:8px 14px;font-size:.88rem}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;background:var(--card);border-top:1px solid var(--line);padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));display:flex;gap:10px;justify-content:center;flex-wrap:wrap;box-shadow:0 -6px 18px rgba(0,0,0,.08)}
+.bar div{display:flex;align-items:center;gap:8px;font-size:.88rem}
+.badge{display:inline-block;padding:2px 11px;border-radius:99px;color:#fff;font-family:Prompt,sans-serif;font-size:.82rem;font-weight:500;white-space:nowrap}
+.l0{background:#177a3c}.l1{background:#a86b00}.l2{background:#c2540a}.l3{background:#b4232a}.l-1{background:#6b7f79}
+.rec{border:1px solid var(--line);border-radius:14px;margin-top:12px;background:var(--card)}
+.rec summary{padding:13px 15px;cursor:pointer;display:flex;flex-wrap:wrap;gap:8px;align-items:center;list-style:none}
+.rec summary::-webkit-details-marker{display:none}
+.rec summary strong{font-family:Prompt,sans-serif;color:var(--pri);margin-right:auto}
+.rec .body{padding:0 15px 15px;font-size:.92rem}
+.kv{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px 14px;margin:8px 0}
+.kv i{display:block;font-style:normal;color:var(--mute);font-size:.78rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px}
+.stat{background:var(--pri2);border-radius:14px;padding:14px}
+.stat b{display:block;font:600 1.8rem/1.2 Prompt,sans-serif;color:var(--pri)}
+.hb{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:.9rem}
+.hb em{font-style:normal;width:6.5rem;flex:none}
+.hb u{display:block;height:14px;border-radius:7px;text-decoration:none;min-width:3px}
+.empty{text-align:center;color:var(--mute);padding:34px 10px}
+.mask{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:40;display:none;align-items:flex-end;justify-content:center}
+.mask.on{display:flex}
+.modal{background:var(--card);width:min(560px,100%);max-height:88vh;overflow:auto;border-radius:20px 20px 0 0;padding:20px 18px calc(20px + env(safe-area-inset-bottom,0px))}
+.modal h3{margin:0 0 8px;font-size:1.15rem}
+.res{border-radius:12px;padding:12px 14px;margin:10px 0;background:var(--pri2)}
+.res .big{font:600 1.5rem/1.2 Prompt,sans-serif}
+.toast{position:fixed;left:50%;bottom:92px;transform:translateX(-50%);background:#16302b;color:#fff;padding:10px 18px;border-radius:12px;z-index:60;font-size:.9rem;display:none;max-width:90vw;text-align:center}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.slot{border:1px solid var(--line);background:var(--bg);color:var(--mute);border-radius:10px;padding:8px 13px;min-height:44px;font:500 .92rem Prompt,sans-serif;cursor:pointer}.slot.ok{background:#177a3c;border-color:#177a3c;color:#fff}.slot.late{border-color:#d9622b;color:#d9622b}.tb{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:8px}.tb th,.tb td{padding:8px 6px;border-bottom:1px solid var(--line);text-align:right}.tb th:first-child,.tb td:first-child{text-align:left}.tb th{color:var(--mute);font-weight:500;font-size:.8rem}.tb .tot td{font-weight:600;background:var(--pri2)}.pos{color:#d9622b;font-weight:600}.neg{color:var(--acc);font-weight:600}.chart{width:100%;height:auto;margin-top:10px}
+footer{text-align:center;color:var(--mute);font-size:.88rem;padding:6px 14px 30px;margin-top:20px}
+footer b{color:var(--pri);font-family:Prompt,sans-serif;font-weight:500}
+@media(prefers-reduced-motion:no-preference){.modal{animation:up .25s ease-out}@keyframes up{from{transform:translateY(40px);opacity:0}}}
+</style>
+</head>
+<body>
+<header class="hero">
+<div class="lotus" aria-hidden="true">🪷</div>
+<h1>ทะเบียนพระภิกษุสงฆ์อาพาธ โรคไตวายเรื้อรัง</h1>
+<p>สำหรับหอสงฆ์อาพาธ บันทึกข้อมูลรายรูป ประเมินความเสี่ยงภาวะน้ำเกิน และความเข้าใจในการดูแลตนเอง พร้อมแปลผลอัตโนมัติ</p>
+<span class="pill">ระบุด้วย HN เท่านั้น ไม่เก็บชื่อและฉายา</span>
+</header>
+<div class="wrap">
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" aria-selected="true" data-v="0">บันทึกใหม่</button>
+<button class="tab" role="tab" aria-selected="false" data-v="1">รายรูป <span id="cnt"></span></button>
+<button class="tab" role="tab" aria-selected="false" data-v="2">สรุปภาพรวม</button>
+<button class="tab" role="tab" aria-selected="false" data-v="3">ติดตามผล</button>
+</div>
+<section id="v0"><div id="fm"></div>
+<div class="row"><button class="btn" id="save">บันทึกข้อมูลและแปลผล</button><button class="btn alt" id="clr">ล้างแบบฟอร์ม</button></div></section>
+<section id="v1" hidden></section>
+<section id="v2" hidden></section>
+<section id="v3" hidden></section>
+<footer>ข้อมูลเก็บในเบราว์เซอร์เครื่องนี้เท่านั้น ใช้เป็นเครื่องมือช่วยประเมิน ไม่แทนการวินิจฉัยของแพทย์<br>ออกแบบและพัฒนาโดย <b>นายสกล โคตรสมบัติ</b></footer>
+</div>
+<div class="bar" id="bar"></div>
+<div class="mask" id="mask"><div class="modal" id="modal" role="dialog" aria-modal="true"></div></div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const KEY='ckd_records_v2';
+let DB=[];try{DB=JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){}
+const persist=()=>{try{localStorage.setItem(KEY,JSON.stringify(DB))}catch(e){toast('บันทึกลงเครื่องไม่ได้ กรุณาคัดลอกข้อมูลสำรองไว้')}};
+const SEC=[
+['ข้อมูลทั่วไป','🪪',[['hn','HN พระภิกษุอาพาธ *','text'],['date','วันที่ประเมิน *','date'],['age','อายุ (ปี) *','number'],['st','สถานภาพ','sel',['พระภิกษุ','สามเณร']],['vas','พรรษา (ถ้ามี)','number'],['wt','น้ำหนักปัจจุบัน (กก.)','number'],['ht','ส่วนสูง (ซม.)','number'],['ward','วัด/จังหวัดที่จำวัด','text'],['cg','ผู้ดูแลหลัก','sel',['พระลูกวัด/ลูกศิษย์','ญาติโยม','ไม่มีผู้ดูแลประจำ']]]],
+['ข้อมูลโรคไต','🩺',[['stage','ระยะโรคไต *','sel',['ระยะ 1','ระยะ 2','ระยะ 3a','ระยะ 3b','ระยะ 4','ระยะ 5 (ยังไม่บำบัดทดแทนไต)','ระยะ 5D (ฟอกเลือด/ล้างไต)']],['etio','สาเหตุหลัก','sel',['เบาหวาน','ความดันโลหิตสูง','ไตอักเสบ (GN)','โรคถุงน้ำในไต','นิ่วในไต/ทางเดินปัสสาวะ','ยาหรือสารพิษต่อไต','ไม่ทราบสาเหตุ','อื่น ๆ']],['yrs','ระยะเวลาที่ป่วย (ปี)','number'],['rrt','การบำบัดทดแทนไต','sel',['ยังไม่ได้บำบัด','ฟอกเลือด (HD)','ล้างไตทางหน้าท้อง (CAPD)','ปลูกถ่ายไต']],['hdf','ความถี่ HD (ครั้ง/สัปดาห์)','number'],['access','ทางเข้าหลอดเลือด/ช่องท้อง','sel',['ไม่มี','AVF','AVG','Permcath','Double lumen','สายล้างไตหน้าท้อง']],['dry','น้ำหนักแห้ง (กก.)','number'],['uo','ปัสสาวะ (มล./วัน)','number'],['fl','น้ำที่ฉันรวมต่อวัน รวมน้ำปานะ (มล.)','number'],['flr','น้ำที่แนะนำต่อวัน (มล.)','number']]],
+['สัญญาณชีพ','💓',[['sbp','ความดัน SBP','number'],['dbp','ความดัน DBP','number'],['hr','ชีพจร (ครั้ง/นาที)','number'],['rr','อัตราหายใจ (ครั้ง/นาที)','number'],['spo2','SpO₂ (%)','number'],['temp','อุณหภูมิ (°C)','number']]],
+['ผลตรวจทางห้องปฏิบัติการ','🧪',[['cr','Creatinine (mg/dL)','number'],['egfr','eGFR (มล./นาที/1.73 ตร.ม.)','number'],['bun','BUN (mg/dL)','number'],['k','โพแทสเซียม (mmol/L)','number'],['na','โซเดียม (mmol/L)','number'],['hco3','HCO₃ (mmol/L)','number'],['ca','แคลเซียม (mg/dL)','number'],['phos','ฟอสเฟต (mg/dL)','number'],['pth','iPTH (pg/mL)','number'],['hb','Hb (g/dL)','number'],['alb','Albumin (g/dL)','number'],['hba1c','HbA1c (%)','number'],['uacr','UACR (มก./กรัม)','number']]],['การฉันและวิถีชีวิตสงฆ์','🍚',[['meals','จำนวนมื้อที่ฉัน','sel',['1 มื้อ','2 มื้อ','มากกว่า 2 มื้อ (ตามที่แพทย์/พยาบาลแนะนำ)']],['src','แหล่งอาหารหลัก','sel',['บิณฑบาต','โยมถวายที่วัด','ครัววัด','ปรุงฉันเอง','อาหารจากโรงพยาบาล']]]]];
+const DIS=['เบาหวาน','ความดันโลหิตสูง','โรคหัวใจ/หัวใจล้มเหลว','ไขมันในเลือดสูง','เก๊าท์','โลหิตจาง','โรคหลอดเลือดสมอง','โรคตับ','ภาวะกระดูกและแร่ธาตุผิดปกติ (CKD-MBD)','ติดเชื้อทางเดินปัสสาวะ'];
+const PAN=['น้ำหวาน/น้ำอัดลม','น้ำผลไม้','นมถั่วเหลือง/นม','ชา/กาแฟ/เครื่องดื่มมอลต์','เครื่องดื่มชูกำลัง','น้ำสมุนไพร','น้ำอ้อย/น้ำตาลโตนด'];const RSK=['แกงถุง/อาหารถุงสำเร็จ','น้ำพริก/ปลาร้า/ปลาเค็ม','อาหารหมักดอง','อาหารกระป๋อง/ไส้กรอก/บะหมี่กึ่งสำเร็จรูป','ผลไม้โพแทสเซียมสูง (กล้วย ส้ม ทุเรียน)','ขนมหวาน/ของหวาน','ซดน้ำแกง/น้ำซุป'];
+const MED=['ยาขับปัสสาวะ','ACEi/ARB','ยาลดความดันอื่น ๆ','ยาเบาหวาน/อินซูลิน','ยาจับฟอสเฟต','ยาเพิ่มเลือด (ESA)','เหล็ก/โฟลิก','โซเดียมไบคาร์บอเนต','แคลเซียม/วิตามินดี','ยาลดไขมัน','ยาสมุนไพร/ยาลูกกลอน','ใช้ยากลุ่ม NSAIDs'];
+const FO=[
+['อาการบวม',['ไม่บวม','บวมกดบุ๋มเล็กน้อยที่เท้า/หน้าแข้ง','บวมถึงเข่า/ต้นขา หรือหน้าบวม','บวมทั่วตัว/ท้องมาน']],
+['น้ำหนักเพิ่มจากน้ำหนักแห้ง หรือจากครั้งก่อน',['น้อยกว่า 1 กก.','1–1.9 กก.','2–2.9 กก.','ตั้งแต่ 3 กก.ขึ้นไป']],
+['ความดันโลหิต (มม.ปรอท)',['น้อยกว่า 130/80','130–139 / 80–89','140–159 / 90–99','ตั้งแต่ 160/100 ขึ้นไป']],
+['อาการหายใจ',['ปกติ','เหนื่อยเมื่อออกแรง','เหนื่อยขณะพัก','จำวัดราบไม่ได้ ต้องนั่งพิง']],
+['ปริมาณปัสสาวะต่อวัน',['มากกว่า 1,000 มล.','500–1,000 มล.','100–499 มล.','น้อยกว่า 100 มล./ไม่มีปัสสาวะ']],
+['ปริมาณน้ำที่ได้รับ (รวมน้ำปานะ/น้ำซุป) เทียบกับที่แนะนำ',['ไม่เกินที่แนะนำ','เกินน้อยกว่า 500 มล.','เกิน 500–1,000 มล.','เกินมากกว่า 1,000 มล.']],
+['การฉันอาหารเค็ม/โซเดียมสูง (แกงถุง น้ำพริก ปลาร้า)',['แทบไม่มี','เป็นบางมื้อ','เกือบทุกมื้อ','ทุกมื้อ/เติมเครื่องปรุงเพิ่ม']],
+['การตรวจปอดและหลอดเลือดดำที่คอ',['ปอดใส ไม่มี JVD','มีเสียง crackles ฐานปอดเล็กน้อย','crackles สองข้างชัดเจน หรือมี JVD','crackles ทั่วปอด ร่วมกับหอบเหนื่อย']]];
+const CQ=[
+['โรคไตวายเรื้อรังหมายถึงอะไร',['ไตอักเสบเฉียบพลัน หายได้ใน 1 สัปดาห์','ไตทำงานลดลงหรือผิดปกติต่อเนื่องนานเกิน 3 เดือน','ไตติดเชื้อจากการดื่มน้ำน้อย','ไตที่ต้องฟอกเลือดทุกราย'],1,'โรคไตเรื้อรังคือไตผิดปกติหรือทำงานลดลงต่อเนื่องเกิน 3 เดือน'],
+['ข้อใดช่วยลดโซเดียมได้ดีที่สุด',['เติมน้ำปลาเพิ่มให้อร่อย','ฉันอาหารสำเร็จรูปแทนแกงถุง','ใช้ผงชูรสแทนเกลือ','เลือกอาหารปรุงเอง ลดเครื่องปรุง เลี่ยงอาหารแปรรูป'],3,'ลดเครื่องปรุงและอาหารแปรรูป เพราะโซเดียมทำให้คั่งน้ำและความดันสูง'],
+['ผู้ป่วยที่โพแทสเซียมในเลือดสูงควรเลี่ยงผลไม้ใด',['แอปเปิ้ล องุ่น สับปะรด','ผลไม้ทุกชนิดฉันได้ไม่จำกัด','กล้วย ส้ม ทุเรียน','ไม่ต้องเลี่ยงผลไม้ใดเลย'],2,'กล้วย ส้ม ทุเรียนมีโพแทสเซียมสูง อาจทำให้หัวใจเต้นผิดจังหวะ'],
+['ข้อใดเป็นสัญญาณของภาวะน้ำเกิน',['บวม น้ำหนักเพิ่มเร็ว เหนื่อย นอนราบไม่ได้','น้ำหนักลดเร็ว ปากแห้ง หน้ามืด','ปวดศีรษะเล็กน้อยหลังตื่นนอน','เบื่ออาหารอย่างเดียว'],0,'บวม น้ำหนักเพิ่มเร็ว และเหนื่อยหอบ คือสัญญาณน้ำเกิน'],
+['ยาแก้ปวดกลุ่มใดควรหลีกเลี่ยง',['พาราเซตามอลตามที่แพทย์สั่ง','ยากลุ่ม NSAIDs เช่น ไอบูโพรเฟน ไดโคลฟีแนค','ยาลดไข้ทุกชนิดห้ามใช้','ไม่มีข้อห้ามใด'],1,'NSAIDs ทำให้เลือดไปเลี้ยงไตลดลงและไตเสื่อมเร็วขึ้น'],
+['การชั่งน้ำหนักที่ถูกต้องคือ',['สัปดาห์ละครั้ง','เมื่อรู้สึกบวมเท่านั้น','ทุกวัน เวลาเดิม หลังถ่ายปัสสาวะ ก่อนฉันอาหาร','เดือนละครั้งที่โรงพยาบาล'],2,'ชั่งทุกวันในสภาพเดิมจึงเห็นน้ำหนักที่เพิ่มจากน้ำคั่งได้เร็ว'],
+['เมื่อโยมถวายอาหารที่เค็มจัดหรือมีโพแทสเซียมสูง ควรปฏิบัติอย่างไร',['ฉันทั้งหมดเพื่อไม่ให้เสียน้ำใจโยม','เลือกฉันเท่าที่เหมาะกับโรค และอธิบายให้โยมเข้าใจ','เติมน้ำปลาหรือเครื่องปรุงให้อร่อยขึ้น','ฉันให้หมดเพราะเป็นบุญ'],1,'พระภิกษุอาพาธเลือกฉันอาหารที่เหมาะกับโรคได้ และสื่อสารกับโยมผู้ถวายหรือผู้ดูแลให้เข้าใจ เพื่อสุขภาพที่เอื้อต่อการปฏิบัติศาสนกิจ'],
+['น้ำปานะ (น้ำหวาน น้ำผลไม้ นมถั่วเหลือง) ที่ฉันหลังเที่ยง ควรคิดอย่างไร',['ไม่นับเป็นน้ำดื่ม','ฉันได้ไม่จำกัดเพราะเป็นน้ำหวาน','ควรฉันน้ำปานะแทนน้ำเปล่าทั้งหมด','นับรวมในปริมาณน้ำต่อวัน และเลือกชนิดที่เหมาะกับโรคไต'],3,'น้ำปานะนับเป็นน้ำที่ได้รับ และบางชนิดมีน้ำตาล โพแทสเซียม หรือฟอสเฟตสูง'],
+['ยาลูกกลอน ยาหม้อ หรือสมุนไพรที่ไม่ทราบส่วนประกอบ',['ฉันได้เพราะเป็นธรรมชาติ','ไม่ควรใช้เอง ควรปรึกษาแพทย์/เภสัชกรก่อน','ใช้ได้ถ้าโยมถวายมา','ใช้ร่วมกับยาประจำได้ทุกชนิด'],1,'ยาที่ไม่ทราบส่วนประกอบอาจมีโลหะหนักหรือ NSAIDs ที่ทำลายไต'],
+['อาการใดควรรีบแจ้งพยาบาลหรือไปโรงพยาบาลทันที',['จำวัดตอนบ่ายเป็นบางวัน','ปากแห้งเล็กน้อยหลังฉันเช้า','หายใจเหนื่อยหอบ ปัสสาวะออกน้อยมาก บวมเร็ว ใจสั่น','ปวดเมื่อยเล็กน้อยหลังนั่งนาน'],2,'หอบเหนื่อย ปัสสาวะน้อยมาก บวมเร็ว ใจสั่น อาจเป็นน้ำท่วมปอดหรือโพแทสเซียมสูง']];
+const RL=[['ต่ำ','คงคำแนะนำเดิม ชั่งน้ำหนักทุกวัน และติดตามตามนัด'],['ปานกลาง','ทบทวนปริมาณน้ำปานะ/น้ำที่ฉันและอาหารเค็ม ติดตามน้ำหนักและความดันทุกวัน พร้อมแจ้งผู้ดูแลและโยมผู้ถวายภัตตาหาร'],['สูง','แจ้งแพทย์เพื่อประเมินซ้ำ พิจารณาปรับยาขับปัสสาวะหรือรอบการบำบัดทดแทนไต'],['สูงมาก','เสี่ยงน้ำท่วมปอด ควรแจ้งแพทย์ทันทีและเฝ้าระวังอย่างใกล้ชิด']];
+const CL=['ดี','พอใช้','ควรให้ความรู้เพิ่ม'],CC=[0,1,2];
+const rl=s=>s<=5?0:s<=11?1:s<=17?2:3,cl=p=>p>=80?0:p>=60?1:2;
+const ALL=SEC.flatMap(s=>s[2]);
+const esc=t=>String(t??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function fld([id,l,t,o]){
+ if(t==='sel')return `<label class="f"><span>${l}</span><select id="${id}"><option value="">เลือก</option>${o.map(x=>`<option>${x}</option>`).join('')}</select></label>`;
+ return `<label class="f"><span>${l}</span><input id="${id}" type="${t}" ${t==='number'?'step="any" inputmode="decimal"':''}></label>`}
+const chips=(n,a)=>`<div class="chips">${a.map(x=>`<label><input type="checkbox" class="${n}" value="${x}"><b>${x}</b></label>`).join('')}</div>`;
+const radios=(n,a)=>a.map((x,i)=>`<label class="opt"><input type="radio" name="${n}" value="${i}"><span>${x}</span></label>`).join('');
+function build(){
+ let h=SEC.map((s,i)=>`<div class="sec"><h2><span aria-hidden="true">${s[1]}</span>${s[0]}</h2><div class="grid" style="margin-top:12px">${s[2].map(fld).join('')}</div>${i===0?'<div class="bmi" id="bmi"></div>':''}${i===1?'<div class="bmi" id="fgap"></div>':''}</div>`).join('');
+ h+=`<div class="sec"><h2><span aria-hidden="true">💊</span>โรคร่วม ยา และการฉัน</h2><p class="sublab">โรคร่วม</p>${chips('dis',DIS)}<p class="sublab">ยาที่ใช้อยู่</p>${chips('med',MED)}<p class="sublab">น้ำปานะที่ฉันเป็นประจำ</p>${chips('pan',PAN)}<p class="sublab">อาหารที่ฉันบ่อยและควรระวัง</p>${chips('rsk',RSK)}<p class="sublab">แพ้ยา/หมายเหตุ</p><textarea id="note"></textarea></div>`;
+ h+=`<div class="sec"><h2><span aria-hidden="true">💧</span>แบบประเมินความเสี่ยงภาวะน้ำเกิน</h2><p class="sub">พยาบาลเลือกคำตอบตามที่ประเมินได้ ครบ ${FO.length} ข้อ คะแนนรวม 0–24</p>${FO.map((q,i)=>`<div class="q"><p>${i+1}. ${q[0]}</p>${radios('f'+i,q[1])}</div>`).join('')}</div>`;
+ h+=`<div class="sec"><h2><span aria-hidden="true">📖</span>แบบประเมินความเข้าใจในการดูแลตนเอง</h2><p class="sub">ให้พระภิกษุอาพาธเลือกคำตอบที่ถูกที่สุด (พยาบาลอ่านให้ฟังได้) ครบ ${CQ.length} ข้อ</p>${CQ.map((q,i)=>`<div class="q"><p>${i+1}. ${q[0]}</p>${radios('c'+i,q[1])}</div>`).join('')}</div>`;
+ $('#fm').innerHTML=h}
+function readA(){
+ const fo=FO.map((_,i)=>{const e=$(`input[name=f${i}]:checked`);return e?+e.value:-1});
+ const cq=CQ.map((_,i)=>{const e=$(`input[name=c${i}]:checked`);return e?+e.value:-1});
+ return{fo,cq,fs:fo.reduce((a,b)=>a+Math.max(b,0),0),cs:cq.filter((v,i)=>v===CQ[i][2]).length,fa:fo.filter(v=>v>=0).length,ca:cq.filter(v=>v>=0).length}}
+const badge=(c,t)=>`<span class="badge l${c}">${t}</span>`;
+function live(){
+ const a=readA(),p=a.cs*10;
+ $('#bar').innerHTML=`<div>น้ำเกิน ${a.fa}/${FO.length} ข้อ · <b>${a.fs}/24</b> ${a.fa?badge(rl(a.fs),RL[rl(a.fs)][0]):badge(-1,'รอประเมิน')}</div><div>ความเข้าใจ ${a.ca}/${CQ.length} ข้อ · <b>${a.cs}/10</b> ${a.ca?badge(cl(p),CL[cl(p)]):badge(-1,'รอประเมิน')}</div>`;
+ const w=+$('#wt').value,h=+$('#ht').value;
+ $('#bmi').textContent=w&&h?`BMI ${(w/((h/100)**2)).toFixed(1)} กก./ตร.ม.`:'';
+ const d=+$('#dry').value,s=+$('#sbp').value;
+ const g=[];if(w&&d)g.push(`น้ำหนักส่วนเกินจากน้ำหนักแห้ง ${(w-d).toFixed(1)} กก.`);
+ const f=+$('#fl').value,r=+$('#flr').value;if(f&&r)g.push(`น้ำดื่ม${f>r?'เกิน':'ไม่เกิน'}ที่แนะนำ ${Math.abs(f-r)} มล.`);
+ $('#fgap').textContent=g.join(' · ')}
+function toast(t){const e=$('#toast');e.textContent=t;e.style.display='block';clearTimeout(toast.t);toast.t=setTimeout(()=>e.style.display='none',3200)}
+function wrongList(r){return r.cq.map((v,i)=>v===CQ[i][2]?'':`<li><b>ข้อ ${i+1}</b> ${CQ[i][0]}<br>คำตอบที่ถูก: ${CQ[i][1][CQ[i][2]]}<br><small>${CQ[i][3]}</small></li>`).join('')}
+function resultHTML(r){
+ const L=rl(r.fs),p=r.cs*10,C=cl(p),flag=r.fo[3]===3||r.fo[7]===3;
+ const wl=wrongList(r);
+ return `<div class="res"><div>ความเสี่ยงภาวะน้ำเกิน</div><div class="big">${r.fs}/24 ${badge(L,RL[L][0])}</div><p style="margin:6px 0 0">${RL[L][1]}</p>${flag?'<p style="margin:6px 0 0;color:#b4232a;font-weight:600">พบอาการหายใจหรือปอดผิดปกติรุนแรง ควรแจ้งแพทย์ทันที</p>':''}</div>
+ <div class="res"><div>ความเข้าใจในการดูแลตนเอง</div><div class="big">${r.cs}/10 (${p}%) ${badge(C,CL[C])}</div><p style="margin:6px 0 0">${C===0?'เข้าใจดี ให้กำลังใจและติดตามต่อเนื่อง':C===1?'เข้าใจพอใช้ ควรทบทวนหัวข้อที่ตอบผิด':'ควรให้ความรู้เพิ่มเติมและประเมินซ้ำ'}</p></div>
+ ${wl?`<p class="sublab">หัวข้อที่ควรทบทวน</p><ol style="padding-left:20px;margin:6px 0">${wl}</ol>`:''}`}
+function modal(h){$('#modal').innerHTML=h+'<div class="row"><button class="btn" id="mx">ปิด</button></div>';$('#mask').classList.add('on');$('#mx').onclick=()=>$('#mask').classList.remove('on')}
+$('#mask').onclick=e=>{if(e.target.id==='mask')e.target.classList.remove('on')};
+function save(){
+ const a=readA(),miss=[];
+ if(!$('#hn').value.trim())miss.push('HN');if(!$('#date').value)miss.push('วันที่ประเมิน');if(!$('#age').value)miss.push('อายุ');if(!$('#stage').value)miss.push('ระยะโรคไต');
+ if(miss.length)return toast('กรุณากรอก: '+miss.join(', '));
+ if(a.fa<FO.length)return toast(`ประเมินภาวะน้ำเกิน ยังเหลืออีก ${FO.length-a.fa} ข้อ`);
+ if(a.ca<CQ.length)return toast(`แบบประเมินความเข้าใจ ยังเหลืออีก ${CQ.length-a.ca} ข้อ`);
+ const r={rid:Date.now(),fo:a.fo,cq:a.cq,fs:a.fs,cs:a.cs};
+ ALL.forEach(f=>r[f[0]]=$('#'+f[0]).value.trim());
+ r.dis=$$('.dis:checked').map(e=>e.value);r.med=$$('.med:checked').map(e=>e.value);r.pan=$$('.pan:checked').map(e=>e.value);r.rsk=$$('.rsk:checked').map(e=>e.value);r.note=$('#note').value.trim();
+ DB.unshift(r);persist();
+ modal(`<h3>ผลการประเมิน HN ${esc(r.hn)}</h3>${resultHTML(r)}`);
+ reset();render()}
+function reset(){build();$('#st').value='พระภิกษุ';$('#date').value=new Date().toISOString().slice(0,10);live()}
+function recHTML(r){
+ const L=rl(r.fs),C=cl(r.cs*10),kv=(l,v,u='')=>v?`<div><i>${l}</i>${esc(v)}${u}</div>`:'';
+ return `<details class="rec"><summary><strong>HN ${esc(r.hn)}</strong><span>${esc(r.date)}</span>${r.stage?`<span>${esc(r.stage.split(' (')[0])}</span>`:''}${badge(L,'น้ำเกิน '+RL[L][0])}${badge(C,'เข้าใจ '+CL[C])}</summary><div class="body">
+ <div class="kv">${kv('อายุ',r.age,' ปี')}${kv('สถานภาพ',r.st)}${kv('พรรษา',r.vas)}${kv('วัด/จังหวัด',r.ward)}${kv('ผู้ดูแลหลัก',r.cg)}${kv('จำนวนมื้อ',r.meals)}${kv('แหล่งอาหาร',r.src)}${kv('น้ำหนัก',r.wt,' กก.')}${kv('น้ำหนักแห้ง',r.dry,' กก.')}${kv('การบำบัดทดแทนไต',r.rrt)}${kv('สาเหตุ',r.etio)}${kv('BP',r.sbp&&r.dbp?r.sbp+'/'+r.dbp:'')}${kv('Cr',r.cr)}${kv('eGFR',r.egfr)}${kv('K',r.k)}${kv('Na',r.na)}${kv('Hb',r.hb)}${kv('Phos',r.phos)}${kv('Alb',r.alb)}${kv('ปัสสาวะ',r.uo,' มล./วัน')}${kv('น้ำดื่ม',r.fl,' มล./วัน')}</div>
+ ${r.dis.length?`<p><b>โรคร่วม:</b> ${r.dis.map(esc).join(', ')}</p>`:''}${r.med.length?`<p><b>ยา:</b> ${r.med.map(esc).join(', ')}</p>`:''}${(r.pan||[]).length?`<p><b>น้ำปานะ:</b> ${r.pan.map(esc).join(', ')}</p>`:''}${(r.rsk||[]).length?`<p><b>อาหารที่ควรระวัง:</b> ${r.rsk.map(esc).join(', ')}</p>`:''}${r.note?`<p><b>หมายเหตุ:</b> ${esc(r.note)}</p>`:''}
+ ${resultHTML(r)}<button class="btn del" data-d="${r.rid}">ลบรายการนี้</button></div></details>`}
+function render(){
+ $('#cnt').textContent=DB.length?`(${DB.length})`:'';
+ $('#v1').innerHTML=DB.length?`<div class="row" style="margin-top:16px"><button class="btn alt" id="csv">คัดลอกข้อมูลทั้งหมด (CSV)</button></div>${DB.map(recHTML).join('')}`:'<div class="sec empty">ยังไม่มีข้อมูล เริ่มจากแท็บ “บันทึกใหม่”</div>';
+ const n=DB.length;
+ if(!n){$('#v2').innerHTML='<div class="sec empty">สรุปภาพรวมจะแสดงเมื่อมีข้อมูลอย่างน้อย 1 ราย</div>';return}
+ const cnt=(arr,k)=>{const m={};arr.forEach(x=>{const v=k(x);m[v]=(m[v]||0)+1});return m};
+ const bars=(m,cols)=>Object.entries(m).map(([k,v],i)=>`<div class="hb"><em>${k}</em><u style="width:${v/n*100*0.6}%;background:${cols?cols[i%cols.length]:'var(--pri)'}"></u><b>${v}</b></div>`).join('');
+ const rm=cnt(DB,r=>RL[rl(r.fs)][0]),cm=cnt(DB,r=>CL[cl(r.cs*10)]);
+ const ord=(m,names)=>Object.fromEntries(names.filter(x=>m[x]).map(x=>[x,m[x]]));
+ const avgC=Math.round(DB.reduce((a,r)=>a+r.cs,0)/n*10),avgF=(DB.reduce((a,r)=>a+r.fs,0)/n).toFixed(1);
+ const hi=DB.filter(r=>rl(r.fs)>=2).length;
+ $('#v2').innerHTML=`<div class="sec"><h2>ภาพรวมพระภิกษุอาพาธ ${n} รูป</h2><div class="stats" style="margin-top:12px"><div class="stat"><b>${avgF}</b>คะแนนน้ำเกินเฉลี่ย (เต็ม 24)</div><div class="stat"><b>${hi}</b>เสี่ยงสูงขึ้นไป</div><div class="stat"><b>${avgC}%</b>ความเข้าใจเฉลี่ย</div></div></div>
+ <div class="sec"><h2>ระดับความเสี่ยงภาวะน้ำเกิน</h2>${bars(ord(rm,RL.map(x=>x[0])),['#177a3c','#a86b00','#c2540a','#b4232a'].filter((_,i)=>rm[RL[i][0]]))}</div>
+ <div class="sec"><h2>ระดับความเข้าใจ</h2>${bars(ord(cm,CL),['#177a3c','#a86b00','#b4232a'].filter((_,i)=>cm[CL[i]]))}</div>
+ <div class="sec"><h2>ระยะโรคไต</h2>${bars(cnt(DB,r=>(r.stage||'ไม่ระบุ').split(' (')[0]))}</div>`}
+function csv(){
+ const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+ const hd=[...ALL.map(f=>f[1].replace(' *','')),'โรคร่วม','ยา','น้ำปานะ','อาหารที่ควรระวัง','หมายเหตุ','คะแนนน้ำเกิน','ระดับน้ำเกิน','คะแนนความเข้าใจ (เต็ม 10)','ระดับความเข้าใจ'];
+ const rows=DB.map(r=>[...ALL.map(f=>r[f[0]]),r.dis.join('; '),r.med.join('; '),(r.pan||[]).join('; '),(r.rsk||[]).join('; '),r.note,r.fs,RL[rl(r.fs)][0],r.cs,CL[cl(r.cs*10)]].map(q).join(','));
+ const t=[hd.map(q).join(','),...rows].join('\n');
+ const ok=()=>toast('คัดลอก CSV แล้ว วางใน Excel หรือ Google Sheets ได้');
+ const fb=()=>{const a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');ok()}catch(e){toast('คัดลอกไม่สำเร็จ')}a.remove()};
+ navigator.clipboard?navigator.clipboard.writeText(t).then(ok,fb):fb()}
+$('#fm').addEventListener('input',live);
+$('#save').onclick=save;
+$('#clr').onclick=()=>{reset();toast('ล้างแบบฟอร์มแล้ว')};
+$('#v1').addEventListener('click',e=>{
+ if(e.target.id==='csv')return csv();
+ const d=e.target.dataset.d;if(!d)return;
+ if(e.target.dataset.ok){DB=DB.filter(r=>String(r.rid)!==d);persist();render();toast('ลบรายการแล้ว')}
+ else{e.target.dataset.ok=1;e.target.textContent='กดอีกครั้งเพื่อยืนยันการลบ'}});
+$$('.tab').forEach(t=>t.onclick=()=>{
+ $$('.tab').forEach(x=>x.setAttribute('aria-selected',x===t));
+ [0,1,2,3].forEach(i=>$('#v'+i).hidden=String(i)!==t.dataset.v);if(t.dataset.v==='3')renderF();
+ $('#bar').style.display=t.dataset.v==='0'?'flex':'none';scrollTo({top:0})});
+const FK='ckd_follow_v1';let FL=[];try{FL=JSON.parse(localStorage.getItem(FK)||'[]')}catch(e){}
+const fsave=()=>{try{localStorage.setItem(FK,JSON.stringify(FL))}catch(e){toast('บันทึกลงเครื่องไม่ได้')}};
+const VS=[['bt','BT (°C)'],['pr','PR (ครั้ง/นาที)'],['rr','RR (ครั้ง/นาที)'],['sbp','SBP'],['dbp','DBP'],['spo2','SpO₂ (%)'],['wt','น้ำหนัก (กก.)']];
+const IO1=[['i1','ฉันน้ำ/น้ำปานะ (มล.)'],['i2','สารน้ำทางหลอดเลือด (มล.)'],['i3','อาหาร/ยาทางสาย (มล.)']];
+const IO2=[['o1','ปัสสาวะ (มล.)'],['o2','UF ฟอกเลือด/ล้างไต (มล.)'],['o3','อาเจียน/ถ่ายเหลว/drain (มล.)']];
+const LB=[['k','K'],['na','Na'],['hco3','HCO₃'],['bun','BUN'],['cr','Cr'],['hb','Hb'],['dtx','DTX']];
+const LBL=Object.fromEntries([...VS,...LB,...IO1,...IO2]),KS=Object.keys(LBL);
+const RF={bt:[36,37.5],pr:[60,100],rr:[12,20],sbp:[90,140],dbp:[50,90],spo2:[94,100],k:[3.5,5.5],na:[135,145],hco3:[22,29],hb:[7,18],dtx:[70,180]};
+const FS={hn:'',iv:2,date:'',m:'sbp'};
+const p2=n=>String(n).padStart(2,'0'),ymd=d=>d.getFullYear()+'-'+p2(d.getMonth()+1)+'-'+p2(d.getDate()),hm=d=>p2(d.getHours())+':'+p2(d.getMinutes());
+const dkey=ts=>{const d=new Date(ts);if(d.getHours()<8)d.setDate(d.getDate()-1);return ymd(d)};
+const sh=h=>h>=8&&h<16?0:h>=16?1:2,SN=['เวรเช้า 08–16','เวรบ่าย 16–24','เวรดึก 00–08'];
+const tot=(e,a)=>a.reduce((s,x)=>s+(+e[x[0]]||0),0),IN=e=>tot(e,IO1),OT=e=>tot(e,IO2);
+const sg=n=>n>0?'+'+n:String(n),sc=n=>n>0?'pos':n<0?'neg':'';
+const flags=e=>Object.keys(RF).filter(k=>e[k]!==undefined&&(e[k]<RF[k][0]||e[k]>RF[k][1])).map(k=>LBL[k].split(' ')[0]+' '+e[k]+(e[k]>RF[k][1]?'↑':'↓'));
+const ff=a=>a.map(([k,l])=>`<label class='f'><span>${l}</span><input id='f_${k}' type='number' step='any' inputmode='decimal'></label>`).join('');
+function renderF(){
+ if(!$('#f_hn')){
+  $('#v3').innerHTML=`<div class='sec'><h2><span aria-hidden='true'>📈</span>ติดตามผลรายชั่วโมง</h2><p class='sub'>บันทึก V/S, I/O และ Lab ตามรอบ แล้วสรุปยอดรายเวรและรายวันอัตโนมัติ</p><div class='grid'><label class='f'><span>HN</span><select id='f_hn'></select></label><label class='f'><span>วันที่ (นับจากเวรเช้า 08:00)</span><input id='f_date' type='date'></label></div><p class='sublab'>รอบการติดตาม</p><div class='chips'>${[1,2,4].map(n=>`<label><input type='radio' name='fiv' value='${n}' ${n===FS.iv?'checked':''}><b>ทุก ${n} ชั่วโมง</b></label>`).join('')}</div></div><div class='sec' id='fslots'></div><div class='sec'><h2><span aria-hidden='true'>✍️</span>บันทึกผล</h2><div class='grid' style='margin-top:12px'><label class='f'><span>วันที่</span><input id='f_d' type='date'></label><label class='f'><span>เวลา</span><input id='f_t' type='time'></label></div><p class='sublab'>สัญญาณชีพ (V/S)</p><div class='grid'>${ff(VS)}</div><p class='sublab'>รับเข้า (Intake)</p><div class='grid'>${ff(IO1)}</div><p class='sublab'>ขับออก (Output)</p><div class='grid'>${ff(IO2)}</div><p class='sublab'>ผลแล็บ</p><div class='grid'>${ff(LB)}</div><div class='row'><button class='btn' id='fsave'>บันทึกผลรอบนี้</button></div></div><div id='fsum'></div>`;
+  const n=new Date();FS.date=dkey(n.getTime());$('#f_date').value=FS.date;$('#f_d').value=ymd(n);$('#f_t').value=p2(n.getHours())+':00'}
+ const hs=[...new Set([...DB.map(r=>r.hn),...FL.map(e=>e.hn)])].filter(Boolean);
+ $('#f_hn').innerHTML=hs.length?hs.map(h=>`<option>${esc(h)}</option>`).join(''):'<option value="">ยังไม่มี HN</option>';
+ if(!hs.includes(FS.hn))FS.hn=hs[0]||'';$('#f_hn').value=FS.hn;fview()}
+function fview(){
+ if(!FS.hn){$('#fslots').innerHTML='<div class="empty">บันทึกข้อมูลพื้นฐานในแท็บ “บันทึกใหม่” ก่อน แล้วกลับมาเลือก HN ที่นี่</div>';$('#fsum').innerHTML='';return}
+ const E=FL.filter(e=>e.hn===FS.hn).sort((a,b)=>a.ts-b.ts),day=E.filter(e=>dkey(e.ts)===FS.date);
+ const base=new Date(FS.date+'T08:00:00').getTime(),n=24/FS.iv,now=Date.now();let done=0;
+ const sl=Array.from({length:n},(_,i)=>{const s=base+i*FS.iv*36e5,ok=day.some(x=>x.ts>=s&&x.ts<s+FS.iv*36e5);done+=ok;return `<button type='button' class='slot ${ok?'ok':s<now?'late':''}' data-s='${s}'>${hm(new Date(s))}</button>`}).join('');
+ $('#fslots').innerHTML=`<h2><span aria-hidden='true'>⏱️</span>ตารางรอบทุก ${FS.iv} ชั่วโมง</h2><p class='sub'>บันทึกแล้ว ${done}/${n} รอบ สีเขียวคือบันทึกแล้ว สีส้มคือเลยเวลาแต่ยังไม่บันทึก แตะเวลาเพื่อกรอกรอบนั้น</p><div class='slots'>${sl}</div>`;
+ const S=[0,1,2].map(()=>[0,0,0]);day.forEach(e=>{const s=sh(new Date(e.ts).getHours());S[s][0]+=IN(e);S[s][1]+=OT(e);S[s][2]++});
+ const T=S.reduce((a,r)=>[a[0]+r[0],a[1]+r[1]],[0,0]);
+ const tr=(l,i,o,c)=>`<tr${c?' class="tot"':''}><td>${l}</td><td>${i}</td><td>${o}</td><td class='${sc(i-o)}'>${sg(i-o)}</td></tr>`;
+ const bd=a=>a.map(([x,l])=>[l.split(' (')[0],day.reduce((s,e)=>s+(+e[x]||0),0)]).filter(z=>z[1]).map(z=>z.join(' ')+' มล.').join(', ')||'-';
+ const D={};E.forEach(e=>{const k=dkey(e.ts);(D[k]=D[k]||[0,0])[0]+=IN(e);D[k][1]+=OT(e)});
+ let cum=0;const dr=Object.keys(D).sort().map(k=>{cum+=D[k][0]-D[k][1];return [k,D[k][0],D[k][1],cum]}).reverse().slice(0,14);
+ const pts=E.filter(e=>e[FS.m]!==undefined).map(e=>[e.ts,e[FS.m]]);
+ let ch='<p class="sub" style="margin-top:10px">ต้องมีข้อมูลอย่างน้อย 2 จุดจึงแสดงกราฟ</p>';
+ if(pts.length>1){const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]),x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys),X=t=>30+(t-x0)/(x1-x0||1)*280,Y=v=>110-(v-y0)/(y1-y0||1)*90,R=RF[FS.m],dt=t=>new Date(t).toLocaleDateString('th-TH',{day:'numeric',month:'short'});
+ ch=`<svg viewBox='0 0 320 130' class='chart' role='img' aria-label='กราฟแนวโน้ม'><polyline fill='none' stroke-width='2.5' style='stroke:var(--pri)' points='${pts.map(p=>X(p[0])+','+Y(p[1])).join(' ')}'/>${pts.map(p=>`<circle cx='${X(p[0])}' cy='${Y(p[1])}' r='4.5' style='fill:${R&&(p[1]<R[0]||p[1]>R[1])?'#d9622b':'var(--pri)'}'/>`).join('')}<text x='2' y='24' font-size='11' style='fill:var(--mute)'>${y1}</text><text x='2' y='114' font-size='11' style='fill:var(--mute)'>${y0}</text><text x='30' y='127' font-size='10' style='fill:var(--mute)'>${dt(x0)}</text><text x='310' y='127' text-anchor='end' font-size='10' style='fill:var(--mute)'>${dt(x1)}</text></svg>`}
+ const el=day.slice().reverse().map(e=>{const i=IN(e),o=OT(e);return `<details class='rec'><summary><strong>${hm(new Date(e.ts))}</strong><span>เข้า ${i} ออก ${o}</span><span class='${sc(i-o)}'>${sg(i-o)}</span>${flags(e).map(x=>`<span class='badge l2'>${x}</span>`).join('')}</summary><div class='body'><div class='kv'>${KS.filter(k=>e[k]!==undefined).map(k=>`<div><i>${LBL[k]}</i>${e[k]}</div>`).join('')}</div><button class='btn del' data-fd='${e.ts}'>ลบรอบนี้</button></div></details>`}).join('')||'<div class="empty">ยังไม่มีบันทึกของวันที่เลือก</div>';
+ $('#fsum').innerHTML=`<div class='sec'><h2><span aria-hidden='true'>⚖️</span>สรุป I/O รายเวร วันที่ ${FS.date}</h2><p class='sub'>เข้า − ออก ค่าบวกคือน้ำคั่ง ค่าลบคือน้ำขาด (ยังไม่รวม insensible loss)</p><table class='tb'><tr><th>เวร</th><th>เข้า (มล.)</th><th>ออก (มล.)</th><th>+/-</th></tr>${S.map((r,i)=>tr(SN[i]+' ('+r[2]+' รอบ)',r[0],r[1])).join('')}${tr('รวม 24 ชม.',T[0],T[1],1)}</table><p class='sub' style='margin-top:10px'>เข้า: ${bd(IO1)}<br>ออก: ${bd(IO2)}</p></div><div class='sec'><h2><span aria-hidden='true'>📅</span>สรุป I/O รายวัน</h2>${dr.length?`<table class='tb'><tr><th>วันที่</th><th>เข้า</th><th>ออก</th><th>+/-</th><th>สะสม</th></tr>${dr.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td class='${sc(r[1]-r[2])}'>${sg(r[1]-r[2])}</td><td class='${sc(r[3])}'>${sg(r[3])}</td></tr>`).join('')}</table>`:'<div class="empty">ยังไม่มีข้อมูล</div>'}</div><div class='sec'><h2><span aria-hidden='true'>📉</span>แนวโน้ม</h2><label class='f'><span>ตัวชี้วัด</span><select id='f_m'>${[...VS,...LB].map(([k,l])=>`<option value='${k}' ${k===FS.m?'selected':''}>${l}</option>`).join('')}</select></label>${ch}<p class='sub'>จุดสีส้มคือค่านอกเกณฑ์อ้างอิงทั่วไป ควรปรับตามเกณฑ์ของหอผู้ป่วย</p></div><div class='sec'><h2><span aria-hidden='true'>🗒️</span>บันทึกของวันที่เลือก (${day.length})</h2>${el}<div class='row'><button class='btn alt' id='fcsv'>คัดลอกข้อมูลติดตามผลทั้งหมด (CSV)</button></div></div>`}
+function fsv(){
+ if(!FS.hn)return toast('เลือก HN ก่อน');
+ const d=$('#f_d').value,t=$('#f_t').value;if(!d||!t)return toast('ระบุวันที่และเวลา');
+ const e={hn:FS.hn,ts:new Date(d+'T'+t).getTime()};
+ KS.forEach(k=>{const v=$('#f_'+k).value;if(v!=='')e[k]=+v});
+ if(Object.keys(e).length<3)return toast('กรอกข้อมูลอย่างน้อย 1 ช่อง');
+ KS.forEach(k=>$('#f_'+k).value='');
+ FL.push(e);fsave();FS.date=dkey(e.ts);$('#f_date').value=FS.date;fview();
+ const f=flags(e);toast(f.length?'บันทึกแล้ว พบค่าผิดปกติ: '+f.join(', '):'บันทึกผลเวลา '+t+' แล้ว')}
+function fcsv(){
+ const q=v=>'"'+String(v??'').replace(/"/g,'""')+'"';
+ const rows=FL.slice().sort((a,b)=>a.ts-b.ts).map(e=>[e.hn,dkey(e.ts),hm(new Date(e.ts)),SN[sh(new Date(e.ts).getHours())],...KS.map(k=>e[k]),IN(e),OT(e),IN(e)-OT(e)].map(q).join(','));
+ const t=[['HN','วันที่ (เริ่มเวรเช้า)','เวลา','เวร',...KS.map(k=>LBL[k]),'รวมเข้า','รวมออก','+/-'].map(q).join(','),...rows].join('\n');
+ (navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>toast('คัดลอก CSV แล้ว'),()=>toast('คัดลอกไม่สำเร็จ'))}
+$('#v3').addEventListener('change',e=>{const t=e.target;if(t.id==='f_hn')FS.hn=t.value;else if(t.id==='f_date')FS.date=t.value;else if(t.name==='fiv')FS.iv=+t.value;else if(t.id==='f_m')FS.m=t.value;else return;fview()});
+$('#v3').addEventListener('click',e=>{const t=e.target.closest('button');if(!t)return;
+ if(t.dataset.s){const d=new Date(+t.dataset.s);$('#f_d').value=ymd(d);$('#f_t').value=hm(d);$('#f_d').scrollIntoView({block:'center',behavior:'smooth'});return}
+ if(t.id==='fsave')return fsv();
+ if(t.id==='fcsv')return fcsv();
+ if(t.dataset.fd){if(t.dataset.ok){FL=FL.filter(x=>!(x.hn===FS.hn&&String(x.ts)===t.dataset.fd));fsave();fview()}else{t.dataset.ok=1;t.textContent='กดอีกครั้งเพื่อยืนยันการลบ'}}});
+reset();render();
+</script>
+</body>
+</html>
